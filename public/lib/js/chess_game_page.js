@@ -12,6 +12,7 @@ var onDragStart = function (source, piece, position, orientation) {
 
 //Init chess game function
 var initGame = function (orientation) {
+    //Config the board
     var cfg = {
         draggable: true,
         position: 'start',
@@ -20,7 +21,9 @@ var initGame = function (orientation) {
         orientation: orientation,
         dropOffBoard: 'snapback', // this is the default
     };
+    //Make the board
     board = new ChessBoard('gameboard', cfg);
+    //Make the game to control the board
     game = new Chess();
 }
 
