@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Chess</title>
+    <link rel="stylesheet" href="lib/css/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" href="lib/css/chess_game_page.css">
+</head>
+
+<body>
+<div style="margin: 0 auto;">
+        <div id="create_or_join_game">
+            <div style="margin: 0 auto;">
+                <button id="btn_create">Create a room</button>
+                <button id="btn_show_join_form">Join a room</button>
+            </div>
+            <div hidden id="join_form">
+                <input type="text" id="room_id">
+                <button id="btn_join">Join</button>
+            </div>
+        </div>
+        <div id="room_info"></div>
+        <div id="gameboard" hidden></div>
+    </div>
+    <script src="lib/js/chess.js"></script>
+    <script src="lib/js/chessboard-0.3.0.min.js"></script>
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/socket.io-2.1.1.js"></script>
+    <script src="lib/js/chess_game_page.js"></script>
+</body>
+
+</html>
