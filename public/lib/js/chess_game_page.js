@@ -86,6 +86,10 @@ var handleMove = function (source, target) {
 socket.on('move', function (msg) {
     game.move(msg);
     board.position(game.fen()); //fen is board layout
+    //Game over!
+    if ( game.game_over() ) {
+        alert('Game over');
+    }
 });
 
 //Called when the server call socket.broadcast("joined")
